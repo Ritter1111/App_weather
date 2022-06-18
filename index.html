@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:ital,wght@1,300&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<title>wireframe</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" 
+    integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" 
+    crossorigin="anonymous">
+    <body class="static" background="s.jpg">  
+        <div class="cont" >
+            <div class="weather-app-wrapper" >
+                <div class="row">
+                    <div class="col">
+                        <form id="search_form">
+                            <input
+                            type="search"
+                            placeholder="Search city here.."
+                            id="city-in" />
+                            <input 
+                            type="submit" 
+                            value="Search" 
+                            class="btn btn-light" />
+                        </form>
+                        
+                        <div class="col right">
+                            <h2><strong>Weather</strong></h2>
+                            <h6 id="date_now"></h6>
+                            <!-- Thursday 26st may 2022, 10:49 -->
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="row">
+                    <div class="col non">
+                        <br />
+                        <strong> 
+                        <span class="deg" id="degrees">
+                            <span class="deg" id="degree">16 </span>
+                                <a href="#" class="link" id="one_href" value="hre">&degC
+                                </a>
+                        <span class="stick">|
+                        </span>
+                        <a href="#" class="link" id="two_href">&degF
+                        </a>
+                    </span>
+                </strong>
+                        <br />
+                        <i class="fa-solid fa-cloud-bolt"></i>pressure: 
+                        <br />
+                        <span id="pressure"></span> d.
+                        <br />
+                        <i class="fa-solid fa-droplet"></i> humidity: 
+                        <br />
+                        <span id="humidity"></span>%
+                        <br />
+                        <i class="fa-solid fa-wind"></i>wind: 
+                        <br />
+                        <span id="wind"></span>km/h
+                    </div>
+                
+                    <div class="col-6">
+                        <img src="obl1.png" class="img" />
+                    </div>
+                    <div class="col">
+                        <p class="city">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span id="city_input"> City</span>
+                        </p>
+                        <span id="date_id">Thursday, 10:49</span>
+                        <br />
+                       <span id="cloud">Cloudy</span> 
+                        <br />
+                    <button class="butn" id="button_1">Current Location</button>
+                    </div> 
+                </div> 
+                <div class="row justify-content-start">
+                    <div class="col-2">Today</div>
+                    <div class="col-4">5 day forecast</div>
+                </div>
+
+                <hr>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <h7>Monday</h7>
+                            <h3><i class="fa-solid fa-cloud-bolt"></i></h3>
+                            <h7>4&degC</h7>
+                        </div>
+
+                        <div class="col">
+                            <h7>Tuesday</h7>
+                            <h3><i class="fa-solid fa-cloud-bolt"></i></h3>
+                            <h7>5&degC</h7>
+                        </div>
+
+                        <div class="col">
+                            <h7>Wednesday</h7>
+                            <h3><i class="fa-solid fa-cloud-bolt"></i></h3>
+                            <h7>7&degC</h7>
+                        </div>
+                        <div class="col">
+                            <h7>Thursday</h7>
+                            <h3><i class="fa-solid fa-cloud-bolt"></i></h3>
+                            <h7>3&degC</h7>
+                        </div>
+
+                        <div class="col">
+                            <h7>Friday</h7>
+                            <h3><i class="fa-solid fa-cloud-bolt"></i></h3>
+                            <h7>8&degC</h7>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://kit.fontawesome.com/99c730e6d3.js" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+    </body>
+</html>

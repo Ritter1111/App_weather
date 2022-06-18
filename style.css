@@ -1,0 +1,75 @@
+.static {
+    font-family: "Kaushan Script", cursive;
+    font-family: "Montserrat", sans-serif;
+  }
+  .right {
+    position: relative;
+    left: 430px;
+    color: #bf00ff;
+    font-size: 27px;
+    margin-top: -45px;
+  }
+  .img {
+    display: block;
+    margin: 30px auto;
+    width: 220px;
+  }
+  .non {
+    color: #bf00ff;
+    position: relative;
+    left: 35px;
+  }
+  .city {
+    color: white;
+    font-size: 30px;
+    margin-top: 38px;
+  }
+  .col {
+    color: white;
+  }
+  .weather-app-wrapper {
+    max-width: 750px;
+    margin: 30px auto;
+    border-radius: 40px;
+    padding: 20px;
+    background: linear-gradient(25, 25, 25, 0);
+  }
+  .deg {
+    font-size: 40px;
+    font-weight: bold;
+  }
+  .static {
+    color: white;
+  }
+  #city-input {
+    box-shadow: 0 0 12px 0 #a5becc;
+  }
+  .container {
+    text-align: center;
+  }
+  .fa-cloud-bolt {
+    color: #cdf0ea;
+  }
+  .link {
+    font-size: 15px;
+    color: #cdf0ea;
+  }
+  .stick {
+    font-size: 17px;
+  }
+  .butn {
+    background-color: rgba(28, 28, 28, 0);
+    color: white;
+    padding: 3px;
+    border-radius: 10px;
+    box-shadow: 0 -3px rgb(64, 53, 167) inset;
+    transition: 0.2s;
+  }
+  .butn:hover {
+    background: rgb(53, 80, 167);
+  }
+  .butn:active {
+    background: rgb(33, 40, 147);
+    box-shadow: 0 3px rgb(33, 120, 147) inset;
+  }
+  
