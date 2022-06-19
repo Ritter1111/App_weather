@@ -56,7 +56,8 @@ function displayWeatherCondition(response) {
     response.data.wind.speed
   );
   
-  document.querySelector("#pressure").innerHTML =response.data.main.pressure; 
+  document.querySelector("#pressure").innerHTML =response.data.main.pressure;
+  document.querySelector("#cloud").innerHTML=response.data.weather[0].main;
   
 }
 function searchCity(city) {
