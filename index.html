@@ -7,13 +7,15 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:ital,wght@1,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:ital,wght@1,300&display=swap" 
+      rel="stylesheet">
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <title>wireframe</title>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" 
+<link rel="stylesheet" 
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" 
     integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" 
     crossorigin="anonymous">
-    <body class="static" background="s.jpg">  
+    <body class="static">  
         <div class="cont" >
             <div class="weather-app-wrapper" >
                 <div class="row">
@@ -26,13 +28,13 @@
                             <input 
                             type="submit" 
                             value="Search" 
-                            class="btn btn-light" />
+                            class="btn btn-light"
+                            id="btn-light" />
                         </form>
                         
                         <div class="col right">
                             <h2><strong>Weather</strong></h2>
                             <h6 id="date_now"></h6>
-                            <!-- Thursday 26st may 2022, 10:49 -->
                         </div>
                     </div>
                 </div>
@@ -43,30 +45,29 @@
                         <strong> 
                         <span class="deg" id="degrees">
                             <span class="deg" id="degree">16 </span>
-                                <a href="#" class="link" id="one_href" value="hre">&degC
-                                </a>
-                        <span class="stick">|
-                        </span>
-                        <a href="#" class="link" id="two_href">&degF
-                        </a>
-                    </span>
-                </strong>
+                                <a href="#" class="link" id="one_href" value="hre">&degC</a>
+                                    <span class="stick">|</span>
+                                        <a href="#" class="link" id="two_href">&degF</a>
+                         </span>
+                         </strong>
                         <br />
-                        <i class="fa-solid fa-cloud-bolt"></i>pressure: 
-                        <br />
-                        <span id="pressure"></span> d.
-                        <br />
-                        <i class="fa-solid fa-droplet"></i> humidity: 
-                        <br />
-                        <span id="humidity"></span>%
-                        <br />
-                        <i class="fa-solid fa-wind"></i>wind: 
-                        <br />
+                        <i class="fa-solid fa-cloud-bolt"></i>pressure:<br />
+                        <span id="pressure"></span> d.<br />
+                        <i class="fa-solid fa-droplet"></i> humidity:<br />
+                        <span id="humidity"></span>%<br />
+                        <i class="fa-solid fa-wind"></i>wind:<br />
                         <span id="wind"></span>km/h
                     </div>
                 
                     <div class="col-6">
-                        <img src="obl1.png" class="img" />
+                        <div class="Temp">
+                            <div class="block-temp">
+                              <div class="block-weater">Clear</div>
+                              <span class="block-degrees" id="degrees">14</span>
+                              <a href="#" class="celsius">°C</a>
+                              <a href="#" class="fahrenheit">°F</a>
+                            </div>
+                          </div>
                     </div>
                     <div class="col">
                         <p class="city">
@@ -117,9 +118,14 @@
                             <h7>8&degC</h7>
                         </div>
                     </div>
-                    <a href="https://github.com/Ritter1111/App_weather">My_repository</a>
                 </div>
             </div>
+        </div>
+        <div id="my-contact">
+        <span>This project was coded by</span>
+        <a href="https://www.linkedin.com/in/angelina-liapin-3a5050211">Angelina Liapin</a>
+        <span>and is</span>
+        <a href="https://github.com/Ritter1111/App_weather">open-sorced on GitHub</a>
         </div>
 
         <script src="https://kit.fontawesome.com/99c730e6d3.js" crossorigin="anonymous"></script>

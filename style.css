@@ -2,53 +2,101 @@
     font-family: "Kaushan Script", cursive;
     font-family: "Montserrat", sans-serif;
   }
-  .right {
-    position: relative;
-    left: 430px;
-    color: #bf00ff;
-    font-size: 27px;
-    margin-top: -45px;
-  }
-  .img {
-    display: block;
-    margin: 30px auto;
-    width: 220px;
-  }
-  .non {
-    color: #bf00ff;
-    position: relative;
-    left: 35px;
-  }
-  .city {
-    color: white;
-    font-size: 30px;
-    margin-top: 38px;
-  }
-  .col {
-    color: white;
-  }
   .weather-app-wrapper {
     max-width: 750px;
     margin: 30px auto;
     border-radius: 40px;
     padding: 20px;
-    background: linear-gradient(25, 25, 25, 0);
+    background: linear-gradient(45deg, #B6B6B4, #FBF6D9 );
+  }
+  .right {
+    position: relative;
+    left: 430px;
+    font-size: 27px;
+    margin-top: -45px;
+  }
+  #btn-light{
+    border-radius: 10px; 
   }
   .deg {
     font-size: 40px;
     font-weight: bold;
   }
-  .static {
-    color: white;
+  .fa-cloud-bolt {
+    color: #F3E5AB;
   }
+  .fa-solid{
+      color: #F3E5AB;
+  }
+  .Temp {
+    background: linear-gradient(45deg, #FFEFD5, #F3E5AB);
+    border-radius: 30px;
+    max-width: 210px;
+    color: black;
+    margin: 0 auto;
+    font-weight: 500;
+    padding: 30px;
+    padding-bottom: 0;
+    margin-top: 30px;
+  }
+  .celsius,
+  .fahrenheit {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: normal;
+    position: relative;
+    top: -83px;
+    left: 68px;
+  }
+  .block-temp {
+    text-align: center;
+  }
+  .block-weater {
+    font-size: 24px;
+  }
+  .block-degrees {
+    display: block;
+    line-height: 90px;
+    font-size: 85px;
+  }
+  .butn {
+    background-color: rgba(28, 28, 28, 0);
+    color: black;
+    padding: 3px;
+    border-radius: 10px;
+    box-shadow: 0 -3px #F3E5AB inset;
+    transition: 0.2s;
+  }
+  .butn:hover {
+    background: #F3E5AB;
+  }
+  .butn:active {
+    background: #F3E5AB;
+    box-shadow: 0 3px rgb(33, 120, 147) inset;
+  }
+  
   #city-input {
     box-shadow: 0 0 12px 0 #a5becc;
   }
   .container {
     text-align: center;
   }
-  .fa-cloud-bolt {
-    color: #cdf0ea;
+  .non {
+    position: relative;
+    left: 35px;
+  }
+  #city-in{
+    border-radius: 15px;
+    width: 250px;
+  }
+  .city {
+    color: black;
+    font-size: 30px;
+    margin-top: 38px;
+  }
+  .static {
+    color: black;
   }
   .link {
     font-size: 15px;
@@ -57,19 +105,6 @@
   .stick {
     font-size: 17px;
   }
-  .butn {
-    background-color: rgba(28, 28, 28, 0);
-    color: white;
-    padding: 3px;
-    border-radius: 10px;
-    box-shadow: 0 -3px rgb(64, 53, 167) inset;
-    transition: 0.2s;
+  #my-contact{
+      text-align: center;
   }
-  .butn:hover {
-    background: rgb(53, 80, 167);
-  }
-  .butn:active {
-    background: rgb(33, 40, 147);
-    box-shadow: 0 3px rgb(33, 120, 147) inset;
-  }
-  
