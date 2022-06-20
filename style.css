@@ -16,7 +16,7 @@
     margin-top: -45px;
   }
   #btn-light{
-    border-radius: 10px; 
+    border-radius: 25px; 
   }
   .deg {
     font-size: 40px;
@@ -34,16 +34,15 @@
     max-width: 210px;
     color: black;
     margin: 0 auto;
-    font-weight: 500;
-    padding: 30px;
+    font-weight: 500px;
+    padding: 40px;
     padding-bottom: 0;
-    margin-top: 30px;
+    margin-top: 20px;
   }
-  .celsius,
-  .fahrenheit {
+  .celsius{
     color: black;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 30px;
     font-weight: normal;
     position: relative;
     top: -83px;
@@ -73,11 +72,11 @@
   }
   .butn:active {
     background: #F3E5AB;
-    box-shadow: 0 3px rgb(33, 120, 147) inset;
+    box-shadow: 0 3px #F3E5AB inset;
   }
   
   #city-input {
-    box-shadow: 0 0 12px 0 #a5becc;
+    box-shadow: 0 0 12px 0 #F3E5AB;
   }
   .container {
     text-align: center;

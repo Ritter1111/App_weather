@@ -50,6 +50,9 @@ function displayWeatherCondition(response) {
   document.querySelector("#degree").innerHTML = Math.round(
     response.data.main.temp
   );
+  document.querySelector("#degrees_front").innerHTML = Math.round(
+    response.data.main.temp
+  );
 
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(
@@ -58,6 +61,7 @@ function displayWeatherCondition(response) {
   
   document.querySelector("#pressure").innerHTML =response.data.main.pressure;
   document.querySelector("#cloud").innerHTML=response.data.weather[0].main;
+  document.querySelector("#front-clear").innerHTML=response.data.weather[0].main;
   
 }
 function searchCity(city) {
@@ -95,15 +99,17 @@ function convert(event){
   event.preventDefault();
   let temperat = document.querySelector("#degree");
   let temperature = temperat.innerHTML;
-  temperat.innerHTML = Math.round(temperature * 1.8 + 32);
+  temperat.innerHTML = Math.round(temperature * 1.8 + 32); 
   
 }
+
 function convertCelcius(event){
   event.preventDefault();
   let tem = document.querySelector("#degree");
   let temperature1 = tem.innerHTML;
   tem.innerHTML = Math.round((temperature1-32)/1.8) ;
 }
+
 let farenheite = document.querySelector("#two_href");
 farenheite.addEventListener("click", convert);
 
