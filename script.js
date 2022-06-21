@@ -90,6 +90,8 @@ currentLocationButton.addEventListener("click", getCurrentLocation);
 
 searchCity("Sofia");
 
+let celciusTemperature = null;
+
 function convert(event){
   event.preventDefault();
   let temperat = document.querySelector("#degree");
@@ -98,13 +100,11 @@ function convert(event){
   
 }
 
-let celciusTemperature = null;
-
 function convertCelcius(event){
   event.preventDefault();
   let tem = document.querySelector("#degree");
   let temperature1 = tem.innerHTML;
-  tem.innerHTML = Math.round((celciusTemperature-32)/1.8) ;
+  tem.innerHTML = Math.round(celciusTemperature);
 }
 
 let farenheite = document.querySelector("#two_href");
