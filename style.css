@@ -2,6 +2,13 @@
     font-family: "Kaushan Script", cursive;
     font-family: "Montserrat", sans-serif;
   }
+  .general{
+    background: radial-gradient(
+    circle at 10% 20%,
+    #B6B6B4  0%,
+    #FBF6D9 100.2%
+  );
+  }
   .weather-app-wrapper {
     max-width: 750px;
     margin: 30px auto;
