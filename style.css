@@ -58,6 +58,7 @@
     display: block;
     line-height: 90px;
     font-size: 85px;
+    font-weight: 700;
   }
   .butn {
     background-color: rgba(28, 28, 28, 0);

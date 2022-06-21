@@ -46,18 +46,13 @@ function FormatDate() {
 }
 
 function displayWeatherCondition(response) {
+    celciusTemperature =  response.data.main.temp;
   document.querySelector("#city_input").innerHTML = response.data.name;
-  document.querySelector("#degree").innerHTML = Math.round(
-    response.data.main.temp
-  );
-  document.querySelector("#degrees_front").innerHTML = Math.round(
-    response.data.main.temp
-  );
+  document.querySelector("#degree").innerHTML = Math.round(celciusTemperature);
+  document.querySelector("#degrees_front").innerHTML = Math.round(celciusTemperature );
 
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-  document.querySelector("#wind").innerHTML = Math.round(
-    response.data.wind.speed
-  );
+  document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
   
   document.querySelector("#pressure").innerHTML =response.data.main.pressure;
   document.querySelector("#cloud").innerHTML=response.data.weather[0].main;
@@ -99,15 +94,17 @@ function convert(event){
   event.preventDefault();
   let temperat = document.querySelector("#degree");
   let temperature = temperat.innerHTML;
-  temperat.innerHTML = Math.round(temperature * 1.8 + 32); 
+  temperat.innerHTML = Math.round(celciusTemperature * 1.8 + 32); 
   
 }
+
+let celciusTemperature = null;
 
 function convertCelcius(event){
   event.preventDefault();
   let tem = document.querySelector("#degree");
   let temperature1 = tem.innerHTML;
-  tem.innerHTML = Math.round((temperature1-32)/1.8) ;
+  tem.innerHTML = Math.round((celciusTemperature-32)/1.8) ;
 }
 
 let farenheite = document.querySelector("#two_href");
