@@ -97,7 +97,8 @@ function convert(event){
   let temperat = document.querySelector("#degree");
   let temperature = temperat.innerHTML;
   temperat.innerHTML = Math.round(celciusTemperature * 1.8 + 32); 
-  
+  celcius.classList.remove("link_2");
+  farenheite .classList.add("link_2");
 }
 
 function convertCelcius(event){
@@ -105,6 +106,8 @@ function convertCelcius(event){
   let tem = document.querySelector("#degree");
   let temperature1 = tem.innerHTML;
   tem.innerHTML = Math.round(celciusTemperature);
+  celcius.classList.add("link_2");
+  farenheite .classList.remove("link_2");
 }
 
 let farenheite = document.querySelector("#two_href");

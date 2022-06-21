@@ -105,6 +105,13 @@
   .stick {
     font-size: 17px;
   }
+  .link_2{
+    color: black;
+    cursor: default;
+  }
+  .link_2:hover{
+    text-decoration: none;
+  }
   #my-contact{
       text-align: center;
   }
