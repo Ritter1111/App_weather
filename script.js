@@ -45,7 +45,8 @@ function FormatDate() {
   document.getElementById("date_id").innerHTML = two;
 }
 
-function displayForecast(){
+function displayForecast(response){
+    console.log(response.data);
     let forecastElement = document.querySelector("#forecastW");
 
     let forecastHTML = `<div class="row">`;
@@ -69,6 +70,15 @@ forecastHTML = forecastHTML + `</div>`;
 forecastElement.innerHTML = forecastHTML;
 }
 
+function getForecast(coordinates){
+console.log(coordinates);
+let apiKey = "1801b872861c58c5bdc4c9b616dce426";
+let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?
+lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`
+
+axios.get(apiUrl).then(displayForecast);
+}
+
 function displayWeatherCondition(response) {
     celciusTemperature =  response.data.main.temp;
   document.querySelector("#city_input").innerHTML = response.data.name;
@@ -82,6 +92,7 @@ function displayWeatherCondition(response) {
   document.querySelector("#cloud").innerHTML=response.data.weather[0].main;
   document.querySelector("#front-clear").innerHTML=response.data.weather[0].main;
   
+  getForecast(response.data.coord);
 }
 function searchCity(city) {
   let apiKey = "1801b872861c58c5bdc4c9b616dce426";
@@ -139,4 +150,3 @@ farenheite.addEventListener("click", convert);
 
 let celcius = document.querySelector("#one_href");
 celcius.addEventListener("click", convertCelcius);
-displayForecast();
