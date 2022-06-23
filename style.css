@@ -46,6 +46,15 @@
     padding-bottom: 0;
     margin-top: 20px;
   }
+  /* .forecast{
+      width: 120px;
+      background: linear-gradient(45deg, #FFEFD5, #F3E5AB);
+      border-radius: 25px;
+      margin-top: 10px;
+      margin-left: 10px;
+      margin-right: 10px;
+      
+  } */
   .celsius{
     color: black;
     text-decoration: none;

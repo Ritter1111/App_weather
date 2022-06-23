@@ -45,6 +45,30 @@ function FormatDate() {
   document.getElementById("date_id").innerHTML = two;
 }
 
+function displayForecast(){
+    let forecastElement = document.querySelector("#forecastW");
+
+    let forecastHTML = `<div class="row">`;
+    let days = [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+      ];
+      days.forEach(function(day) {
+        forecastHTML = forecastHTML + `
+        <div class="col">
+            <h7>${day}</h7>
+            <h3><i class="fa-solid fa-cloud-bolt"></i></h3>
+            <h7>4&deg</h7>
+        </div>
+   `;
+      });
+forecastHTML = forecastHTML + `</div>`;
+forecastElement.innerHTML = forecastHTML;
+}
+
 function displayWeatherCondition(response) {
     celciusTemperature =  response.data.main.temp;
   document.querySelector("#city_input").innerHTML = response.data.name;
@@ -115,3 +139,4 @@ farenheite.addEventListener("click", convert);
 
 let celcius = document.querySelector("#one_href");
 celcius.addEventListener("click", convertCelcius);
+displayForecast();
