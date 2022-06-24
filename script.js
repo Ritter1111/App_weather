@@ -41,30 +41,46 @@ function FormatDate() {
   let dayss = da[now.getDay()];
   let dia= `${dayss}, ${month} ${dayn}, ${year}, ${hour}:${min}`;
   let two = `${dayss}, ${hour}:${min}`
+  let currentDay = `${dayss}`;
+  document.getElementById("currentDay").innerHTML = currentDay;
   document.getElementById("date_now").innerHTML = dia;
   document.getElementById("date_id").innerHTML = two;
 }
 
-function displayForecast(response){
-    console.log(response.data);
-    let forecastElement = document.querySelector("#forecastW");
-
-    let forecastHTML = `<div class="row">`;
+function formatDay(timestamp){
+    let date = new Date(timestamp * 1000);
+    let day = date.getDay();
     let days = [
+        "Sunday",
         "Monday",
         "Tuesday",
         "Wednesday",
         "Thursday",
         "Friday",
+        "Saturday"
       ];
-      days.forEach(function(day) {
+    return days[day];
+}
+
+function displayForecast(response){
+    let forecast = response.data.daily;
+   
+    let forecastElement = document.querySelector("#forecastW");
+    let forecastHTML = `<div class="row">`;
+   
+      forecast.forEach(function(forecastDay, index) {
+          if(index<6){
         forecastHTML = forecastHTML + `
         <div class="col">
-            <h7>${day}</h7>
-            <h3><i class="fa-solid fa-cloud-bolt"></i></h3>
-            <h7>4&deg</h7>
+            <h7>${formatDay(forecastDay.dt)}</h7>
+            <h3><img src= "http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
+            alt=""
+            width="72"></h3>
+            <h7>${Math.round(forecastDay.temp.max)}&deg / </h7>
+            <h7>${Math.round(forecastDay.temp.min)}&deg</h7>
         </div>
    `;
+          }
       });
 forecastHTML = forecastHTML + `</div>`;
 forecastElement.innerHTML = forecastHTML;
@@ -91,7 +107,7 @@ function displayWeatherCondition(response) {
   document.querySelector("#pressure").innerHTML =response.data.main.pressure;
   document.querySelector("#cloud").innerHTML=response.data.weather[0].main;
   document.querySelector("#front-clear").innerHTML=response.data.weather[0].main;
-  
+
   getForecast(response.data.coord);
 }
 function searchCity(city) {
