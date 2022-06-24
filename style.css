@@ -3,49 +3,47 @@
   font-family: "Montserrat", sans-serif;
 }
 
-.general {
-  background: radial-gradient(circle at 10% 20%, #b6b6b4 0%, #fbf6d9 100.2%);
-}
-
 .weather-app-wrapper {
-  max-width: 850px;
+  max-width: 810px;
   margin: 30px auto;
   border-radius: 40px;
   padding: 20px;
-  background: linear-gradient(45deg, #b6b6b4, #fbf6d9);
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 #btn-light {
   border-radius: 25px;
 }
 
-.deg {
+.degrees_left {
   font-size: 40px;
   font-weight: bold;
 }
 
-.fa-cloud-bolt {
-  color: #f3e5ab;
-}
-
-.fa-solid {
-  color: #f3e5ab;
-}
-
 .Temp {
-  background: linear-gradient(45deg, #ffefd5, #f3e5ab);
+  background: #7858a6;
   border-radius: 30px;
   max-width: 210px;
-  color: black;
+  color: white;
   margin: 0 auto;
   font-weight: 500px;
   padding: 40px;
   padding-bottom: 0;
   margin-top: 20px;
+  -webkit-transition: background-color 2s ease-out;
+  -moz-transition: background-color 2s ease-out;
+  -o-transition: background-color 2s ease-out;
+  transition: background-color 2s ease-out;
+}
+
+.Temp:hover {
+  background-color: #c71585;
+  cursor: pointer;
 }
 
 .celsius {
-  color: black;
+  color: white;
   text-decoration: none;
   font-size: 30px;
   font-weight: normal;
@@ -71,15 +69,18 @@
 
 .butn {
   background-color: rgba(28, 28, 28, 0);
-  color: black;
+  color: white;
   padding: 3px;
   border-radius: 10px;
-  box-shadow: 0 -3px #f3e5ab inset;
-  transition: 0.2s;
+  box-shadow: 0 -3px #7858a6 inset;
+  -webkit-transition: background-color 1s ease-out;
+  -moz-transition: background-color 1s ease-out;
+  -o-transition: background-color 1s ease-out;
+  transition: background-color 1s ease-out;
 }
 
 .butn:hover {
-  background: #f3e5ab;
+  background: #590696;
 }
 
 .butn:active {
@@ -106,13 +107,13 @@
 }
 
 .city {
-  color: black;
+  color: white;
   font-size: 30px;
   margin-top: 38px;
 }
 
 .static {
-  color: black;
+  color: white;
 }
 
 .link {
@@ -125,7 +126,7 @@
 }
 
 .link_2 {
-  color: black;
+  color: white;
   cursor: default;
 }
 
@@ -143,4 +144,16 @@
 .day {
   font-weight: 19px;
   font-weight: bold;
+}
+
+#myVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
 }

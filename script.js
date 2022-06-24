@@ -69,7 +69,7 @@ function displayForecast(response) {
   let forecastHTML = `<div class="row">`;
 
   forecast.forEach(function (forecastDay, index) {
-    if (index < 6) {
+    if (index < 5) {
       forecastHTML =
         forecastHTML +
         `
@@ -118,6 +118,7 @@ function displayWeatherCondition(response) {
 
   getForecast(response.data.coord);
 }
+
 function searchCity(city) {
   let apiKey = "1801b872861c58c5bdc4c9b616dce426";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -145,7 +146,7 @@ searchForm.addEventListener("submit", handleSubmit);
 let currentLocationButton = document.querySelector("#button_1");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
-searchCity("Sofia");
+searchCity("New York");
 
 let celciusTemperature = null;
 
