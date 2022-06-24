@@ -1,131 +1,146 @@
 .static {
-    font-family: "Kaushan Script", cursive;
-    font-family: "Montserrat", sans-serif;
-  }
-  .general{
-    background: radial-gradient(
-    circle at 10% 20%,
-    #B6B6B4  0%,
-    #FBF6D9 100.2%
-  );
-  }
-  .weather-app-wrapper {
-    max-width: 850px;
-    margin: 30px auto;
-    border-radius: 40px;
-    padding: 20px;
-    background: linear-gradient(45deg, #B6B6B4, #FBF6D9 );
-  }
-  .right {
-    position: relative;
-    left: 530px;
-    font-size: 27px;
-    margin-top: -45px;
-  }
-  #btn-light{
-    border-radius: 25px; 
-  }
-  .deg {
-    font-size: 40px;
-    font-weight: bold;
-  }
-  .fa-cloud-bolt {
-    color: #F3E5AB;
-  }
-  .fa-solid{
-      color: #F3E5AB;
-  }
-  .Temp {
-    background: linear-gradient(45deg, #FFEFD5, #F3E5AB);
-    border-radius: 30px;
-    max-width: 210px;
-    color: black;
-    margin: 0 auto;
-    font-weight: 500px;
-    padding: 40px;
-    padding-bottom: 0;
-    margin-top: 20px;
-  }
-  .celsius{
-    color: black;
-    text-decoration: none;
-    font-size: 30px;
-    font-weight: normal;
-    position: relative;
-    top: -83px;
-    left: 68px;
-  }
-  .block-temp {
-    text-align: center;
-  }
-  .block-weater {
-    font-size: 24px;
-  }
-  .block-degrees {
-    display: block;
-    line-height: 90px;
-    font-size: 85px;
-    font-weight: 700;
-  }
-  .butn {
-    background-color: rgba(28, 28, 28, 0);
-    color: black;
-    padding: 3px;
-    border-radius: 10px;
-    box-shadow: 0 -3px #F3E5AB inset;
-    transition: 0.2s;
-  }
-  .butn:hover {
-    background: #F3E5AB;
-  }
-  .butn:active {
-    background: #F3E5AB;
-    box-shadow: 0 3px #F3E5AB inset;
-  }
-  
-  #city-input {
-    box-shadow: 0 0 12px 0 #F3E5AB;
-  }
-  .container {
-    text-align: center;
-  }
-  .non {
-    position: relative;
-    left: 35px;
-  }
-  #city-in{
-    border-radius: 15px;
-    width: 350px;
-  }
-  .city {
-    color: black;
-    font-size: 30px;
-    margin-top: 38px;
-  }
-  .static {
-    color: black;
-  }
-  .link {
-    font-size: 15px;
-    color: #cdf0ea;
-  }
-  .stick {
-    font-size: 17px;
-  }
-  .link_2{
-    color: black;
-    cursor: default;
-  }
-  .link_2:hover{
-    text-decoration: none;
-  }
-  #my-contact{
-      text-align: center;
-      font-family: 'Kaushan Script', cursive;
-      font-family: 'Montserrat', sans-serif;
-      font-family: 'Playfair Display', serif;
-  }
-  .day{
-      font-weight: 19px;
-      font-weight: bold;
-  }
+  font-family: "Kaushan Script", cursive;
+  font-family: "Montserrat", sans-serif;
+}
+
+.general {
+  background: radial-gradient(circle at 10% 20%, #b6b6b4 0%, #fbf6d9 100.2%);
+}
+
+.weather-app-wrapper {
+  max-width: 850px;
+  margin: 30px auto;
+  border-radius: 40px;
+  padding: 20px;
+  background: linear-gradient(45deg, #b6b6b4, #fbf6d9);
+}
+
+#btn-light {
+  border-radius: 25px;
+}
+
+.deg {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.fa-cloud-bolt {
+  color: #f3e5ab;
+}
+
+.fa-solid {
+  color: #f3e5ab;
+}
+
+.Temp {
+  background: linear-gradient(45deg, #ffefd5, #f3e5ab);
+  border-radius: 30px;
+  max-width: 210px;
+  color: black;
+  margin: 0 auto;
+  font-weight: 500px;
+  padding: 40px;
+  padding-bottom: 0;
+  margin-top: 20px;
+}
+
+.celsius {
+  color: black;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: normal;
+  position: relative;
+  top: -83px;
+  left: 68px;
+}
+
+.block-temp {
+  text-align: center;
+}
+
+.block-weater {
+  font-size: 24px;
+}
+
+.block-degrees {
+  display: block;
+  line-height: 90px;
+  font-size: 85px;
+  font-weight: 700;
+}
+
+.butn {
+  background-color: rgba(28, 28, 28, 0);
+  color: black;
+  padding: 3px;
+  border-radius: 10px;
+  box-shadow: 0 -3px #f3e5ab inset;
+  transition: 0.2s;
+}
+
+.butn:hover {
+  background: #f3e5ab;
+}
+
+.butn:active {
+  background: #f3e5ab;
+  box-shadow: 0 3px #f3e5ab inset;
+}
+
+#city-input {
+  box-shadow: 0 0 12px 0 #f3e5ab;
+}
+
+.container {
+  text-align: center;
+}
+
+.non {
+  position: relative;
+  left: 35px;
+}
+
+#city-in {
+  border-radius: 15px;
+  width: 350px;
+}
+
+.city {
+  color: black;
+  font-size: 30px;
+  margin-top: 38px;
+}
+
+.static {
+  color: black;
+}
+
+.link {
+  font-size: 15px;
+  color: #cdf0ea;
+}
+
+.stick {
+  font-size: 17px;
+}
+
+.link_2 {
+  color: black;
+  cursor: default;
+}
+
+.link_2:hover {
+  text-decoration: none;
+}
+
+#my-contact {
+  text-align: center;
+  font-family: "Kaushan Script", cursive;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Playfair Display", serif;
+}
+
+.day {
+  font-weight: 19px;
+  font-weight: bold;
+}

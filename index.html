@@ -1,107 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:ital,wght@1,300&display=swap" 
-      rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:ital,wght@1,300&family=Playfair+Display:ital@1&display=swap" 
-      rel="stylesheet">
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<title>wireframe</title>
-<link rel="stylesheet" 
-    href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" 
-    integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" 
-    crossorigin="anonymous">
-    <body class="static general">  
-        <div class="cont" >
-            <div class="weather-app-wrapper" >
-                <div class="row">
-                    <div class="col">
-                        <form id="search_form">
-                            <input
-                            type="search"
-                            placeholder="Search city here.."
-                            id="city-in" />
-                            <input 
-                            type="submit" 
-                            value="Search" 
-                            class="btn btn-light"
-                            id="btn-light" />
-                        </form>
-                        
-                        <div class="col right">
-                            <h2 class="font"><strong>Weather</strong></h2>
-                            <h6 id="date_now"></h6>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:ital,wght@1,300&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:ital,wght@1,300&family=Playfair+Display:ital@1&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>wireframe</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+        integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+<body class="static general">
+    <div class="cont">
+        <div class="weather-app-wrapper">
+            <div class="row">
+                <div class="col-8">
+                    <form id="search_form">
+                        <input type="search" placeholder="Search city here.." id="city-in" />
+                        <input type="submit" value="Search" class="btn btn-light" id="btn-light" />
+                    </form>
+
+
+                </div>
+                <div class="col-4 right">
+                    <h2 class="font"><strong>Weather</strong></h2>
+                    <h6 id="date_now"></h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col non">
+                    <br />
+                    <strong>
+                        <span class="deg" id="degrees">
+                            <span class="deg" id="degree">16 </span>
+                            <a href="#" class="link link_2" id="one_href" value="hre">&degC</a>
+                            <span class="stick">|</span>
+                            <a href="#" class="link" id="two_href">&degF</a>
+                        </span>
+                    </strong>
+                    <br />
+                    <i class="fa-solid fa-cloud-bolt gold"></i>pressure:<br />
+                    <span id="pressure"></span> d.<br />
+                    <i class="fa-solid fa-droplet gold"></i> humidity:<br />
+                    <span id="humidity"></span>%<br />
+                    <i class="fa-solid fa-wind gold"></i>wind:<br />
+                    <span id="wind"></span>km/h
+                </div>
+
+                <div class="col-6">
+                    <div class="Temp">
+                        <div class="block-temp">
+                            <div class="day" id="currentDay"></div>
+                            <div class="block-weater" id="front-clear">Clear</div>
+                            <span class="block-degrees" id="degrees_front">14</span>
+                            <span class="celsius" id="cels_temp">°C</span>
                         </div>
                     </div>
                 </div>
-            
-                <div class="row">
-                    <div class="col non">
-                        <br />
-                        <strong> 
-                        <span class="deg" id="degrees">
-                            <span class="deg" id="degree">16 </span>
-                                <a href="#" class="link link_2" id="one_href" value="hre">&degC</a>
-                                    <span class="stick">|</span>
-                                        <a href="#" class="link" id="two_href">&degF</a>
-                         </span>
-                         </strong>
-                        <br />
-                        <i class="fa-solid fa-cloud-bolt gold"></i>pressure:<br />
-                        <span id="pressure"></span> d.<br />
-                        <i class="fa-solid fa-droplet gold"></i> humidity:<br />
-                        <span id="humidity"></span>%<br />
-                        <i class="fa-solid fa-wind gold"></i>wind:<br />
-                        <span id="wind"></span>km/h
-                    </div>
-                
-                    <div class="col-6">
-                        <div class="Temp">
-                            <div class="block-temp">
-                                <div class="day" id="currentDay"></div>
-                                     <div class="block-weater" id="front-clear">Clear</div>
-                                     <span class="block-degrees" id="degrees_front">14</span>
-                                     <span class="celsius" id="cels_temp">°C</span>
-                                 </div>
-                            </div>
-                         </div>
 
-                    <div class="col">
-                        <p class="city">
-                            <i class="fa-solid fa-location-dot gold"></i>
-                            <span id="city_input"> City</span>
-                        </p>
-                        <span id="date_id">Thursday, 10:49</span>
-                        <br />
-                       <span id="cloud">Cloudy</span> 
-                        <br />
+                <div class="col">
+                    <p class="city">
+                        <i class="fa-solid fa-location-dot gold"></i>
+                        <span id="city_input"> City</span>
+                    </p>
+                    <span id="date_id">Thursday, 10:49</span>
+                    <br />
+                    <span id="cloud">Cloudy</span>
+                    <br />
                     <button class="butn" id="button_1">Current Location</button>
-                    </div> 
-                </div> 
-                <div class="row justify-content-start">
-                    <div class="col-2">Today</div>
-                    <div class="col-4">5 day forecast</div>
                 </div>
-
-                <hr>
-                <div class="container" id="forecastW"></div>
             </div>
+            <div class="row justify-content-start">
+                <div class="col-2">Today</div>
+                <div class="col-4">5 day forecast</div>
+            </div>
+
+            <hr>
+            <div class="container" id="forecastW"></div>
         </div>
-        <small>
+    </div>
+    <small>
         <div id="my-contact">
-             <span>This project was coded by</span>
-                 <a href="https://www.linkedin.com/in/angelina-liapin-3a5050211">Angelina Liapin</a>
-                    <span>and is</span>
-                        <a href="https://github.com/Ritter1111/App_weather">open-sorced on GitHub</a>
+            <span>This project was coded by</span>
+            <a href="https://www.linkedin.com/in/angelina-liapin-3a5050211">Angelina Liapin</a>
+            <span>and is</span>
+            <a href="https://github.com/Ritter1111/App_weather">open-sorced on GitHub</a>
         </div>
     </small>
-        <script src="https://kit.fontawesome.com/99c730e6d3.js" crossorigin="anonymous"></script>
-        <script src="script.js"></script>
-    </body>
+    <script src="https://kit.fontawesome.com/99c730e6d3.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
 </html>
