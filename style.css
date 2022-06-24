@@ -1,6 +1,9 @@
 .static {
+  /* font-family: "Kaushan Script", cursive;
+  font-family: "Montserrat", sans-serif; */
   font-family: "Kaushan Script", cursive;
   font-family: "Montserrat", sans-serif;
+  font-family: "Playfair Display", serif;
 }
 
 .weather-app-wrapper {
