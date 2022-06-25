@@ -80,7 +80,7 @@ function displayForecast(response) {
             }@2x.png"
             alt=""
             width="72"></h3>
-            <h7>${Math.round(forecastDay.temp.max)}&deg / </h7>
+            <h7 id="degree5day">${Math.round(forecastDay.temp.max)}&deg / </h7>
             <h7>${Math.round(forecastDay.temp.min)}&deg</h7>
         </div>
    `;
@@ -111,7 +111,7 @@ function displayWeatherCondition(response) {
     response.data.wind.speed
   );
 
-  document.querySelector("#pressure").innerHTML = response.data.main.pressure;
+  document.querySelector("#feelsLike").innerHTML = Math.round(response.data.main.feels_like);
   document.querySelector("#cloud").innerHTML = response.data.weather[0].main;
   document.querySelector("#front-clear").innerHTML =
     response.data.weather[0].main;
