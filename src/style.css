@@ -9,7 +9,7 @@
 .weather-app-wrapper {
   max-width: 810px;
   margin: 30px auto;
-  border-radius: 40px;
+  border-radius: 27px;
   padding: 20px;
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.3);
@@ -160,3 +160,14 @@
   bottom: 0;
   z-index: -1;
 }
+.col.l-tt{
+  transition: transform .15s;
+}
+.col.l-tt:hover{
+  transform: scale(1.27);
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  transition: transform .5s;
+  border-radius: 15px;
+}
+
